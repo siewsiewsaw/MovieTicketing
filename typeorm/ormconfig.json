@@ -1,9 +1,9 @@
 {
    "type": "mssql",
    "host": "localhost",
-   "username": "sa",
-   "password": "Admin12345",
-   "database": "tempdb",
+   "username": "SIEW_SIEW_SAW",
+   "password": "Cloud123#",
+   "database": "Movie",
    "synchronize": true,
    "logging": false,
    "entities": [
