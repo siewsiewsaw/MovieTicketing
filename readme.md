@@ -44,3 +44,29 @@ List all orderID, can be searched or sorted
     }
 ]
 ```
+
+### GET /movies/earning
+
+List all movies earling, can be searched or sorted
+
+**Query Params**
+
+`movieId` - int
+`movie_name_` - string
+`ticketQty` - int
+`price` - number
+`date` - date
+
+**Sample Response** 
+
+```
+[
+    {
+        "movieid": 1,
+        "movie_name": "Spiderman",
+        "ticketQty": 30,
+        "price": 15,
+        "date" : "25/12/2019",
+    }
+]
+```
