@@ -1,0 +1,18 @@
+ 
+  <div class="dropdown">
+    <button class="dropbtn">Movie Names</button>
+    <div class="dropdown-content"
+      *ngFor="let btn of buttons"
+      [class.active]="currentPage === btn"
+      (click)="onClick(btn)"
+      >
+      <a routerLink="{{btn.path}}">
+          {{ btn.title }}
+      </a>
+      <a href="#">Batman</a>
+      <a href="#">Snow White</a>
+    </div>
+  </div>
+ 
+ <!-- <div id="Seat" class="tabcontent">
+   </div> -->

@@ -1,0 +1,37 @@
+  <div class="tab">
+    <button class="tablinks"
+    *ngFor="let btn of buttons"
+    [class.active]="currentPage === btn"
+    (click)="onClick(btn)"
+    >
+    <a routerLink="{{btn.path}}">
+        {{ btn.title }}
+    </a>
+</button>
+    <button class="tablinks" onclick="openFood(event, 'Food')">Food</button>
+    <button class="tablinks" onclick="openChart(event, 'Chart')">Chart</button> 
+  </div>
+  
+  <!-- <div id="Seat" class="tabcontent">
+    <h3>Movie Seating</h3>
+    <p>Movie</p>
+  </div> -->
+  <!-- <div id="Food" class="tabcontent">
+    <h3></h3>
+    <p></p> 
+  </div>
+  <div id="Chart" class="tabcontent">
+    <h3></h3>
+    <p></p> 
+  </div>-->
+  <!-- <div class="tab">
+    <button class="tablinks"
+        *ngFor="let btn of buttons"
+        [class.active]="currentPage === btn"
+        (click)="onClick(btn)"
+        >
+        <a routerLink="{{btn.path}}">
+            {{ btn.title }}
+        </a>
+    </button>
+</div> -->
