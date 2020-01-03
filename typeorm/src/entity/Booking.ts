@@ -1,5 +1,5 @@
 import {Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn} from "typeorm";
-import { MovieShowing } from "./MovieShowing"
+import { Movie } from "./Movie";
 
 @Entity()
 export class Booking {
@@ -14,9 +14,15 @@ export class Booking {
     seatNum: string;
 
     @Column()
-    ticketQty: number;
+    DateShowing: Date;
 
-    @ManyToOne(type => MovieShowing)
-    @JoinColumn({ name: 'Id' })
-    movieShowing: MovieShowing
+    @Column()
+    TimeSlot: string;
+
+    @Column()
+    price: number;
+
+    @ManyToOne(type => Movie)
+    @JoinColumn({ name: 'movieId' })
+    movie: Movie
 }
