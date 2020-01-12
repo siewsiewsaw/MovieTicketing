@@ -26,16 +26,16 @@ public class Movie {
     @Column
     private String movieType;
 
-    @OneToMany(mappedBy = "movieId")
-    private List<Booking> bookings;
+    // @OneToMany(mappedBy = "movieId")
+    // private List<Booking> bookings;
 
-    public List<Booking> getBookings() {
-        return this.bookings;
-    }
+    // public List<Booking> getBookings() {
+    //     return this.bookings;
+    // }
 
-    public void setBookings(List<Booking> bookings) {
-        this.bookings = bookings;
-    }
+    // public void setBookings(List<Booking> bookings) {
+    //     this.bookings = bookings;
+    // }
 
 
     public Long getId() {

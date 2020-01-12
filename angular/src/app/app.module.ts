@@ -6,18 +6,21 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SeatviewComponent } from './seatview/seatview.component';
 import { SittingComponent } from './sitting/sitting.component';
+import { HttpClientModule } from '@angular/common/http';
 
-@NgModule({
+
+ @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
     SidebarComponent,
     SeatviewComponent,
-    SittingComponent
+    SittingComponent,    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
