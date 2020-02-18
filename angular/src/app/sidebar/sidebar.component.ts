@@ -12,6 +12,14 @@ export class SidebarComponent implements OnInit {
       title: "Seat",
       path: "mainpage2/seatview",
     },
+    { 
+      title1: "Chart",
+      path1: "mainpage2/profitchart",
+    },
+    { 
+      title2: "Food",
+      path2: "mainpage2/food",
+    },
   ]
 
 

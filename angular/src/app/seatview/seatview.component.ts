@@ -10,20 +10,20 @@ import { MoviesService} from '../movies.service';
 })
 export class SeatviewComponent implements OnInit {
  
+public movies;
 
-  buttons = [
-    { 
-      title: "Spiderman",
-      path: "/mainpage2/sitting",
-    },
-  ]
-  
   constructor(private route: ActivatedRoute, router: Router, private moviesService: MoviesService ) {}
+   
+  getMovie() {
+    this.moviesService.getMovie().subscribe(
+      movie => { this.movies = movie }      
+      
+    )}
 
-   ngOnInit() {
-    return this.moviesService.getMovie(); 
-    console.log(this.moviesService.getMovie())
-  }
+    ngOnInit(): void {
+      this.getMovie()
+      console.log(this.movies);
+    } 
 
-
+    
 }

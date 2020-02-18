@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookingService } from '../booking.service';
 
 @Component({
   selector: 'app-sitting',
@@ -7,11 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SittingComponent implements OnInit {
 
+  public bookings;
+  public moviebookings;
+  
+  constructor(private bookingService: BookingService) { }
+
+  getBooking() {
+    this.bookingService.getBooking().subscribe(
+      booking => { this.bookings = booking }      
+      
+    )}
+
+  getMovieByBooking() {
+    this.bookingService.getMovieByBooking().subscribe(
+      moviebooking => { this.moviebookings = moviebooking}
+    )}
   
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+      this.getBooking();
+      this.getMovieByBooking();
+      console.log(this.getBooking())
+    } 
+  
 
 }

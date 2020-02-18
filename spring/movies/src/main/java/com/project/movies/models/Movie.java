@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="movie")
 public class Movie {
@@ -26,12 +28,13 @@ public class Movie {
     @Column
     private String movieType;
 
-    // @OneToMany(mappedBy = "movieId")
-    // private List<Booking> bookings;
+    @OneToMany(mappedBy = "movie")
+    @JsonIgnoreProperties("movie")
+    private List<Booking> bookings;
 
-    // public List<Booking> getBookings() {
-    //     return this.bookings;
-    // }
+    public List<Booking> getBookings() {
+        return this.bookings;
+    }
 
     // public void setBookings(List<Booking> bookings) {
     //     this.bookings = bookings;

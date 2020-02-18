@@ -7,7 +7,9 @@
     </a>
 </button>
     <button class="tablinks" onclick="openFood(event, 'Food')">Food</button>
-    <button class="tablinks" onclick="openChart(event, 'Chart')">Chart</button> 
+    <button class="tablinks"  *ngFor="let btn of buttons"><a routerLink="{{btn.path1}}">
+      {{ btn.title1 }}</a>
+</button> 
   </div>
   
   <!-- <div id="Seat" class="tabcontent">

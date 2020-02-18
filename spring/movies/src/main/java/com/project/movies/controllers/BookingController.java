@@ -18,6 +18,8 @@ public class BookingController {
 
     @Autowired
     BookingRepository bookingRepo;
+
+    @Autowired
     MovieRepository movieRepo;
 
     @GetMapping(value = "/booking")
@@ -26,12 +28,12 @@ public class BookingController {
         return bookings;
     }
 
-    // @GetMapping(value = "/movies/{movieId}/bookings")
-    // public List<Booking> show(@PathVariable("movieId") Long movieId){
-    //     Movie movie = movieRepo.findById(movieId).orElse(null);
+    @GetMapping(value = "/movies/{movieId}/bookings")
+    public List<Booking> show(@PathVariable("movieId") Long movieId){
+        
+        Movie movie = movieRepo.findById(movieId).orElse(null);
+        return movie.getBookings();
 
-    //     return movie.getBookings();
-
-    //     //return bookingRepo.findAllByMovieId(movieId);
-    // }
+        //return bookingRepo.findAllByMovieId(movieId);
+    }
 } 

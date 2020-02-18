@@ -1,17 +1,9 @@
- 
+
   <div class="dropdown">
     <button class="dropbtn">Movie Names</button>
-    <div class="dropdown-content"
-      *ngFor="let btn of buttons"
-      
-      >
-      <a routerLink="{{btn.path}}">
-          {{ btn.title }}
+    <div  *ngFor="let movie of movies">
+      <a routerLink="/mainpage2/sitting">
+        {{ movie.movieName }}
       </a>
-      <a href="#">Batman</a>
-      <a href="#">Snow White</a>
     </div>
   </div>
- 
- <!-- <div id="Seat" class="tabcontent">
-   </div> -->

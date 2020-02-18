@@ -7,6 +7,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SeatviewComponent } from './seatview/seatview.component';
 import { SittingComponent } from './sitting/sitting.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfitchartComponent } from './profitchart/profitchart.component';
+import { ChartsModule } from 'ng2-charts';
+import { FoodComponent } from './food/food.component';
 
 
  @NgModule({
@@ -15,12 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
     TopbarComponent,
     SidebarComponent,
     SeatviewComponent,
-    SittingComponent,    
+    SittingComponent,
+    ProfitchartComponent,
+    FoodComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
